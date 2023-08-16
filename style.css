@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'k2d';
+    src: url("font\K2D-Light.ttf") format('truetype');
+    font-weight:300;
+    font-style: normal; 
+  }
+  @font-face {
+    font-family: 'k2d';
+    src: url("font\K2D-Regular.ttf") format('truetype');
+    font-weight:400;
+    font-style: normal; 
+  }
+
+  @font-face {
+    font-family: 'k2d';
+    src: url("font\K2D-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal; 
+  }
+
 body{
     padding: 0%;
     margin: 0%;
@@ -8,11 +28,22 @@ header{
     background-color: rgb(24, 49, 83);
     padding: 20px;
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 header h1{
     margin-left: 50px;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
+    font-family: 'k2d';
+    font-weight: bold;
+    font-style: normal;
+}
+
+header p{
+    margin-left: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'k2d';
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -28,6 +59,10 @@ header h1{
 }
 
 .right-item { 
+    color: rgb(24, 49, 83);
+    font-family: 'k2d';
+    font-weight: 400;
+    font-style: normal;
     flex: 0 0 35%;
     margin-left: 35px;
     width: 100px; 
@@ -37,6 +72,7 @@ header h1{
     padding-bottom: 40px;
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.8);
+ 
 
 }
 
@@ -74,6 +110,7 @@ header h1{
 }
 
 .sumsquare{
+    margin-left: 15px;
     padding-top: 100%;
     position: relative; 
 }
@@ -84,21 +121,253 @@ header h1{
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .namepd{
-    font-size: small;
+    color: rgb(24, 49, 83);
     margin-top: 5px;
+    font-weight: bold;
+    font-family: 'k2d';
+    font-weight: 400;
+    font-style: normal;
     
 }
 
 .imgpd{
-    width: 40%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 35% 65%; 
+    grid-template-rows: 100%; 
+    height: 24vh; 
+}
+
+.left-column {
+   
+    padding: 20px;
+}
+
+.right-column {
+    color: rgb(24, 49, 83);
+    font-size: smaller;
+    padding-left: -5px;
+    font-family: 'k2d';
+    font-weight: 300;
+}
+
+.ltpd{
+    list-style-type: circle;
+}
+
+.price{
+    padding-top: 15px;
+    font-size: larger;
+    margin-left: 10px;
+    font-family: 'k2d';
+    font-weight: 300;
+    color: rgb(32, 97, 150);
+}
+
+.choose{
+    margin-top: 10px;
+}
+.choose1{
+    margin-left: 50px;
+}
+
+.numdis{
+    color: rgb(24, 49, 83);
+    background-color: rgb(255, 255, 255);
+    border: rgb(190, 160, 94) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.buttindis{
+    padding: 10px;
+    border: none; 
+    background-color: transparent; 
+    padding: 0;
+}
+
+.textip{
+    font-family: 'k2d';
+    font-weight: 300;
+    padding: 3px;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fbfbfb;
+    border: 2px solid transparent;
+    height: 30px;
+    width: 300px;
+    box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+    :focus{
+        border: 2px solid #000;
+        border-radius: 4px;
+    }
+
+}
+
+.adr{
+    padding-top: 10px;
+}
+
+.textar{
+    margin-top: -5px;
+    font-family: 'k2d';
+    font-weight: 300;
+    width: 70%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    resize: none;
+}
+
+
+.canbutton{
+    width: 130px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #ff5000;
+    line-height: 1.15;
+    font-size: 16px;
+    :hover {
+        transition: all .1s ease;
+        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    }
+
+}
+
+.subbutton{
+    width: 130px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #16b357;
+    line-height: 1.15;
+    font-size: 16px;
+    :hover {
+        transition: all .1s ease;
+        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    }
+}
+
+.pricesh{
+    font-family: 'k2d';
+    font-weight: 300;
+    margin-top: -40px;
+    margin-left: 10%; 
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.pricesh1{
+    text-align: center;
+    border: hidden;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+}
+
+.pstext{
+    color:rgb(24, 49, 83);
+}
+
+.modalbutt{
+    margin-left: 10px;
+    font-family: 'k2d';
+    font-weight: 300;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 2px 16px;
+    height: 38px;
+    min-width: 96px;
+    min-height: 38px;
+    border: none;
+    color: #fff;
+    background-color: rgb(27, 65, 119);
+    transition: background-color .17s ease,color .17s ease;
+    :hover {
+        background-color: rgb(39, 82, 143);
+    }
+
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    max-width: 400px;
+    width: 80%;
+  }
+  .modal-header {
+    background-color: rgb(250, 176, 5);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .close-button {
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+  }
+  .close-button:hover {
+    color: #ce2121;
+  }
+
+
+
+
+
+footer{
+    font-family: 'k2d';
+    font-weight: 300;
+    bottom: 0%;
+    text-align: center;
+    background-color: rgba(187, 184, 184, 0.8);
+    width: 100%;
+}
