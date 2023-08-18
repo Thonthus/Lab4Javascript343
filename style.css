@@ -46,8 +46,22 @@ header p{
     font-style: normal;
 }
 
+.carousel-indicators {
+    list-style: none; 
+    padding: 0;       
+    margin: 0;       
+}
+
+.carousel-control-next{
+    margin-right: -70px;
+}
+
+.carousel-control-prev{
+    margin-left: -70px;
+}
 
 .flex-container1 {
+    margin-top: 20px;
     display: flex;
     width: 100%; 
     align-items: center; 
@@ -136,8 +150,8 @@ header p{
 
 .imgpd{
     width: 100%;
-    height: 100%;
     border-radius: 20px;
+    margin-bottom: 20px;
     
 }
 
@@ -145,7 +159,7 @@ header p{
     display: grid;
     grid-template-columns: 35% 65%; 
     grid-template-rows: 100%; 
-    height: 24vh; 
+    height: 26vh; 
 }
 
 .left-column {
@@ -165,8 +179,7 @@ header p{
     list-style-type: circle;
 }
 
-.price{
-    padding-top: 15px;
+.pricee{
     font-size: larger;
     margin-left: 10px;
     font-family: 'k2d';
@@ -175,7 +188,7 @@ header p{
 }
 
 .choose{
-    margin-top: 10px;
+    margin-top: -20px;
 }
 .choose1{
     margin-left: 50px;
@@ -335,7 +348,7 @@ header p{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
-    max-width: 400px;
+    max-width: 480px;
     width: 80%;
   }
   .modal-header {

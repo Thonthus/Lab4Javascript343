@@ -112,6 +112,7 @@ const modal = document.getElementById("myModal");
     const openModalButton = document.getElementById("openModalButton");
     const closeModalButton = document.getElementById("closeModalButton");
     const orderDetailsElement = document.getElementById("orderDetails");
+    const priceBefElement = document.getElementById("priceBef");
     const discountMessageElement = document.getElementById("discountMessage");
     const totalPriceElement = document.getElementById("totalPrice");
 
@@ -142,14 +143,16 @@ const modal = document.getElementById("myModal");
       const summ = (currentNumber730 * 730.00) + (currentNumber21 * 2140.00) + (currentNumber55 * 5580.00) + (currentNumber50 * 500.00);
       let final_summ = summ;
       let discountMessage = "";
+      let priceBefMessage = "";
 
       if (summ > 1000) {
         final_summ = summ * (90 / 100);
-        discountMessage = `ราคาก่อนลด ${summ.toFixed(2)} บาท  \nส่วนลด 10% `;
+        priceBefMessage = `รวม ${summ.toFixed(2)} บาท`;
+        discountMessage = `ส่วนลด 10% : ${(summ-(summ*(90/100))).toFixed(2)} บาท`;
       } else {
         discountMessage = "ไม่มีส่วนลด";
       }
-
+      priceBefElement.textContent = priceBefMessage;
       discountMessageElement.textContent = discountMessage;
       totalPriceElement.textContent = `ทั้งหมด ${final_summ.toFixed(2)} บาท`;
 
@@ -165,5 +168,15 @@ const modal = document.getElementById("myModal");
         modal.style.display = "none";
       }
     });
+
+
+
+
+    var myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'), {
+        interval : 3000, // Time in milliseconds between slide transitions
+        wrap: true,     // Whether the carousel should loop
+        // Add more options as needed
+    });
+
 
 
